@@ -6,7 +6,7 @@ import { AuthContext } from "../../context/AuthContext";
 
 export default function Topbar() {
 
-  const navigate = useHistory();
+  const history = useHistory();
 
 
 
@@ -15,8 +15,9 @@ export default function Topbar() {
 
   function handelLogout(){
       localStorage.removeItem("user");
-      navigate.push("/login")
-      console.log(user);
+      user = null
+      history.push("/login")
+      // console.log(user);
   }
 
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;

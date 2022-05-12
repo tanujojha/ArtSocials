@@ -1,5 +1,5 @@
-import Animation from '../components/animation';
-import Prenavbar from '../components/prenavbar';
+import Animation from '../../components/animation/animation';
+import Prenavbar from '../../components/prenavbar/prenavbar';
 
 export default function About(){
 return  <>

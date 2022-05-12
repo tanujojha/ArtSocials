@@ -1,8 +1,8 @@
-import Animation from "../components/animation"
+import Animation from "../../components/animation/animation"
 import { useContext, useRef } from "react";
-import Prenavbar from '../components/prenavbar';
-import { loginCall } from "../apiCalls";
-import { AuthContext } from "../context/AuthContext";
+import Prenavbar from '../../components/prenavbar/prenavbar';
+import { loginCall } from "../../apiCalls";
+import { AuthContext } from "../../context/AuthContext";
 
 
 

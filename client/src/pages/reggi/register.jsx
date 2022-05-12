@@ -1,8 +1,8 @@
-import Animation from "../components/animation"
-import Prenavbar from '../components/prenavbar';
+import Animation from "../../components/animation/animation"
+import Prenavbar from '../../components/prenavbar/prenavbar';
 import axios from "axios";
 import { useRef } from "react";
-import {Link, useNavigate} from "react-router-dom"
+import {Link, useHistory} from "react-router-dom"
 
 
 
@@ -12,7 +12,7 @@ export default function Register() {
   const email = useRef();
   const password = useRef();
   const passwordAgain = useRef();
-  const navigate = useNavigate();
+  const history = useHistory();
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -27,9 +27,9 @@ export default function Register() {
       };
       console.log("user created");
       try {
-        await axios.post("http://localhost:8800/api/auth/register", user);
+        await axios.post("/auth/register", user);
         console.log("posting to reg");
-        navigate("/login");
+        history.push("/login");
       } catch (err) {
         console.log(err);
       }

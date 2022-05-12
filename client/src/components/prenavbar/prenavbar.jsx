@@ -1,5 +1,9 @@
+import { Link, useLocation } from "react-router-dom";
 
 export default function Prenavbar (){
+
+  const location = useLocation();
+
   return(
       <>
 
@@ -7,7 +11,7 @@ export default function Prenavbar (){
   <div className="row justify-content-around">
 
     <div className="col-auto ">
-      <a href="index.html" className="navbar-brand"><img src="pics/arhub-logo.png" alt="ArHub logo" className="logo-img"/></a>
+      <a href="index.html" className="navbar-brand"><img src="assets/pics/artsocial-logo.PNG" alt="ArHub logo" className="logo-img"/></a>
     </div>
 
     <div className="$col col-md-auto ">
@@ -17,15 +21,15 @@ export default function Prenavbar (){
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="ulstyle navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="about">About</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link " href="signin">Sign-In</a>
-            </li>
+          <li className="nav-item">
+            <a className={`nav-link ${location.pathname==="/"? "active": ""}`} aria-current="page" href="/">Home</a>
+          </li>
+          <li className="nav-item">
+            <a className={`nav-link ${location.pathname==="/about"? "active": ""}`} href="about">About</a>
+          </li>
+          <li className="nav-item">
+            <a className={`nav-link ${location.pathname==="/login"? "active": ""}`} href="/login">Sign-In</a>
+          </li>
           </ul>
 
         </div>

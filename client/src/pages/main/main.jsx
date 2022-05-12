@@ -1,6 +1,7 @@
-import Animation from '../components/animation';
-import Footer from '../components/footer';
-import Prenavbar from '../components/prenavbar';
+import Animation from '../../components/animation/animation';
+import Prenavbar from '../../components/prenavbar/prenavbar';
+
+
 
 
 export default function Main (){
@@ -22,7 +23,7 @@ export default function Main (){
 
       </div>
 
-        <Footer/>
+      
         </>
       )
 
