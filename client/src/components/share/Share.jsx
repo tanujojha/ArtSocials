@@ -40,7 +40,7 @@ export default function Share() {
   };
 
   return (
-    <div className="share">
+    <div className="share mt-5">
       <div className="shareWrapper">
         <div className="shareTop">
           <img

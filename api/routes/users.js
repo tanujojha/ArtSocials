@@ -119,4 +119,9 @@ router.put("/:id/unfollow", async (req, res) => {
   }
 });
 
+
+//seacrh a user
+
+router.post("/search/")
+
 module.exports = router;
